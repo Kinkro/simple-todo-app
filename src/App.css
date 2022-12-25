@@ -1,38 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Russo+One&display=swap");
+
+.wrapper {
+  display: flex;
+  background-color: #d9d9d9;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+}
+
 .App {
+  text-align: center;
+  background-color: white;
+  align-self: center;
+  border-radius: 10px;
+  min-height: 500px;
+}
+.title {
+  width: 50%;
+  color: #007fdb;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 96px;
+  line-height: 116px;
+  align-self: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
   display: flex;
   flex-direction: column;
+  background: url("./media/bg-img.svg") no-repeat center;
+  background-size: cover;
+  width: 400px;
+  height: 200px;
+  justify-content: flex-end;
+  align-items: flex-end;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.formContainer {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 5px;
+  margin: 15px 10px;
+}
+
+.inputField {
+  width: 275px;
+  height: 49px;
+  border: none;
+  background: #ebeff2;
+  border-radius: 5px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-indent: 10px;
+  color: #0c0c0c;
+  outline-color: #20eeb0;
+}
+.inputField::placeholder {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #888888;
+}
+
+.button {
+  font-size: 30px;
+  color: white;
+  width: 88px;
+  height: 49px;
+  border: none;
+  background: #20eeb0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #35ffc2;
+}
+
+.time {
+  font-family: "Russo One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 58px;
+  color: #ffffff;
+  margin: 0 20px 10px 20px;
+}
+
+.date {
+  font-family: "Russo One";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+  margin: 0px 20px;
+}
+
+.taskContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 15px;
+  cursor: pointer;
+}
+
+.taskContainer:hover {
+  background-color: rgb(241, 241, 241);
+}
+.task {
+  margin: 0;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  color: #0d0d0d;
+}
+.taskText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.taskTime {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+
+  color: #888888;
+}
+
+.taskIcons {
+  display: flex;
+  gap: 9px;
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.filterButtons {
+  display: inline-block;
+  outline: none;
+  border-width: 0px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-size: inherit;
+  font-weight: 500;
+  max-width: 100%;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.1s ease-out 0s,
+    box-shadow 0.15s cubic-bezier(0.47, 0.03, 0.49, 1.38) 0s;
+  background: #091e420a;
+  cursor: pointer;
+  height: 32px;
+  line-height: 32px;
+  padding: 0px 12px;
+  vertical-align: middle;
+  width: auto;
+  font-size: 14px;
+  color: #42526e;
+}
+
+.filterButtons:hover {
+  background: #091e4214;
+  text-decoration: inherit;
+  transition-duration: 0s, 0.15s;
+  color: #42526e;
+}
+
+.filterButtons:active {
+  box-shadow: #20eeb0 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+.active {
+  background-color: #20eeb0;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* @media (min-width: 768px) {
+  .button-74 {
+    min-width: 120px;
+    padding: 0 25px;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
+} */
